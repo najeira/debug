@@ -2,10 +2,14 @@ package debug
 
 import (
 	"testing"
+	"errors"
 )
 
 func TestPrint(t *testing.T) {
 	Print("Hello")
-	Print("Hello", 123)
-	Printf("Hello %d", 123)
+	Print("Hello %d %s", 123, "Alice")
+	Print(errors.New("some error"))
+	
+	Logger = nil
+	Print("No output")
 }
