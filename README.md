@@ -10,20 +10,18 @@ import "github.com/najeira/debug"
 
 ## Usage
 
-### Printf
-
-format and print.
-
-```go
-debug.Printf("id=%d, name=%s", 123, "Alice")
-```
-
 ### Print
 
 print any values.
 
 ```go
 debug.Print(errors.New("some error"))
+```
+
+format and print.
+
+```go
+debug.Print("id=%d, name=%s", 123, "Alice")
 ```
 
 ### Logger
